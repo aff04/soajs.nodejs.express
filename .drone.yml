@@ -1,0 +1,9 @@
+pipeline:
+  build:
+    image: node:6.9.5
+    commands:
+      - npm install
+      - npm install -g grunt-cli
+      - grunt coverage
+    when:
+      branch: [master]
